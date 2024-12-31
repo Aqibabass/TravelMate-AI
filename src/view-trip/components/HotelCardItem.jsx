@@ -26,7 +26,7 @@ function HotelCardItem({ hotel }) {
   to={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hotel?.hotelName + ', ' + hotel?.hotelAddress)}`}
   className="text-black"
 >
-  <div className="border rounded-xl p-2 hover:scale-105 transition-all cursor-pointer mt-5  h-[370px] hover:shadow-sm">
+  <div className="border rounded-lg p-2 hover:scale-105 transition-transform cursor-pointer mt-3 w-full sm:w-auto flex flex-col h-full">
     <img 
       src={photoUrl || '/placeholder.jpg'} 
       className="rounded-xl h-[180px] w-full object-cover" 
