@@ -10,7 +10,7 @@ export const SelectTravelsList = [
       id: 2,
       title: 'A Couple',
       desc: 'Two Souls, One Adventure',
-      icon: '👯‍♂️',
+      icon: '👩‍❤️‍👨',
       people: '2 People',
     },
     {
@@ -34,19 +34,19 @@ export const SelectTravelsList = [
       id: 1,
       title: 'Cheap',
       desc: 'Stay conscious of costs',
-      icon: '🪙',
+      icon: '💵',
     },
     {
       id: 2,
       title: 'Moderate',
       desc: 'Keep costs on the average side',
-      icon: '💰',
+      icon: '💳',
     },
     {
       id: 3,
       title: 'Luxury',
       desc: 'Don\'t worry about costs',
-      icon: '💎',
+      icon: '👑',
     },
   ];
   
