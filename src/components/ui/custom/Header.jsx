@@ -54,33 +54,34 @@ const GetUserProfile = (accessToken) => {
     <a href="/">
       <img src='/logo.svg' alt="Logo" className='h-8 sm:h-10' />
     </a>
-      <div>
+      <div className="flex items-center gap-2 sm:gap-4">
         {user ? (
-          <div className=' flex items-center gap-3 '>
-           <a href='/create-trip'>
-            <Button variant="outline" className="rounded-full text-sm sm:text-base">+ Create Trip</Button>
+          <>
+            <a href='/create-trip'>
+              <Button variant="outline" className="rounded-full text-xs sm:text-sm py-1 sm:py-2 px-3 sm:px-6">+ Create Trip</Button>
             </a>
 
-           <a href='/my-trips'>
-            <Button variant="outline" className="rounded-full text-sm sm:text-base">My Trips</Button>
+            <a href='/my-trips'>
+              <Button variant="outline" className="rounded-full text-xs sm:text-sm py-1 sm:py-2 px-3 sm:px-6">My Trips</Button>
             </a>
+            
             <Popover>
-              <PopoverTrigger className=" px-1 gap-2 py-1 bg-transparent text-white cursor-pointer rounded-full">
+              <PopoverTrigger className="px-2 py-1 bg-transparent text-white cursor-pointer rounded-full">
                 <img
-                src={user?.picture}
-                alt="User Profile"
-                className=" h-[34px] w-[34px] rounded-full"
+                  src={user?.picture}
+                  alt="User Profile"
+                  className="h-8 w-8 sm:h-10 sm:w-10 rounded-full"
                 />
               </PopoverTrigger>
               <PopoverContent>
-              <h2 className='cursor-pointer ' onClick={()=>{ 
-                googleLogout(); 
-                localStorage.clear(); 
-                window.location.reload(); 
+                <h2 className='cursor-pointer ' onClick={()=>{ 
+                  googleLogout(); 
+                  localStorage.clear(); 
+                  window.location.reload(); 
                 }}>Logout</h2>
               </PopoverContent>
             </Popover>
-          </div>
+          </>
         ) : (
           <Button onClick={()=>setOpenDialog(true)}>Sign In</Button>
         )}
@@ -105,4 +106,5 @@ const GetUserProfile = (accessToken) => {
     </div>
   );
 }
+
 export default Header;
