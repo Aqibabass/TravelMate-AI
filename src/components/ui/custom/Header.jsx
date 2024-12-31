@@ -73,7 +73,7 @@ const GetUserProfile = (accessToken) => {
                   className="h-8 w-8 sm:h-10 sm:w-10 rounded-full"
                 />
               </PopoverTrigger>
-              <PopoverContent className=" w-auto h-auto">
+              <PopoverContent className=" w-auto h-auto mx-4">
                 <h2 className='cursor-pointer ' onClick={()=>{ 
                   googleLogout(); 
                   localStorage.clear(); 
