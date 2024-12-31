@@ -105,5 +105,4 @@ const GetUserProfile = (accessToken) => {
     </div>
   );
 }
-
 export default Header;
