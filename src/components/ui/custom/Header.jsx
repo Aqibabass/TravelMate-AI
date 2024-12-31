@@ -57,7 +57,6 @@ const GetUserProfile = (accessToken) => {
       <div>
         {user ? (
           <div className=' flex items-center gap-3 '>
-           
            <a href='/create-trip'>
             <Button variant="outline" className="rounded-full text-sm sm:text-base">+ Create Trip</Button>
             </a>

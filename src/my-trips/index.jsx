@@ -39,7 +39,6 @@ function MyTrips() {
   <UserTripCardItem trip={trip} key={index} />
 
 
-
         ))
       :[1,2,3,4,5,6].map((item,index)=>(
         <div key={index} className='h-[220px] w-full bg-slate-200 animate-pulse rounded-xl'>
