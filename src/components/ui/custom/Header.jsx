@@ -52,7 +52,7 @@ const GetUserProfile = (accessToken) => {
   return (
     <div className='w-full p-3 mt-1 shadow-sm flex justify-between items-center px-4 sm:px-6 lg:px-10'>
     <a href="/">
-      <img src='/logo.svg' alt="Logo" className='h-8 sm:h-10' />
+      <img src='/logo.svg' alt="Logo" className='h-6 sm:h-8 md:h-10' />
     </a>
       <div className="flex items-center gap-2 sm:gap-4">
         {user ? (
