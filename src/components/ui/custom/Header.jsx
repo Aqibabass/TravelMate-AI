@@ -59,14 +59,14 @@ const GetUserProfile = (accessToken) => {
           <div className=' flex items-center gap-3 '>
            
            <a href='/create-trip'>
-            <Button variant="outline" className=" rounded-full">+ Create Trip</Button>
+            <Button variant="outline" className="rounded-full text-sm sm:text-base">+ Create Trip</Button>
             </a>
 
            <a href='/my-trips'>
-            <Button variant="outline" className=" rounded-full">My Trips</Button>
+            <Button variant="outline" className="rounded-full text-sm sm:text-base">My Trips</Button>
             </a>
             <Popover>
-              <PopoverTrigger className=" px-1 gap-2 py-1 bg-transparent  text-white cursor-pointer rounded-full">
+              <PopoverTrigger className=" px-1 gap-2 py-1 bg-transparent text-white cursor-pointer rounded-full">
                 <img
                 src={user?.picture}
                 alt="User Profile"
