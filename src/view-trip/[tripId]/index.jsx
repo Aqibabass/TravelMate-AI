@@ -6,7 +6,7 @@ import { toast } from 'sonner';
 import InfoSection from '../components/InfoSection';
 import Hotels from '../components/Hotels';
 import PlacesToVisit from '../components/PlacesToVisit';
-import Footer from '../components/Footer';
+import Footer from '../../components/ui/custom/Footer';
 
 function Viewtrip() {
   const { tripId } = useParams();

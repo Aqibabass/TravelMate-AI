@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '../button';
 import { Link } from 'react-router-dom';
-import Footer from '@/view-trip/components/Footer';
+import Footer from '@/components/ui/custom/Footer';
 
 function Hero() {
   return (

@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Hero from './components/ui/custom/Hero'
-import Footer from './view-trip/components/Footer'
+import Footer from './components/ui/custom/Footer'
 
 function App() {
   const [count, setCount] = useState(0)

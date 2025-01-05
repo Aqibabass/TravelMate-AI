@@ -18,7 +18,7 @@ import { useGoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { useNavigate } from 'react-router-dom';
-import Footer from '@/view-trip/components/Footer';
+import Footer from '@/components/ui/custom/Footer';
 
 function CreateTrip() {
     const [place, setPlace] = useState();

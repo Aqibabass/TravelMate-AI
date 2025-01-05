@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigation } from 'react-router-dom';
 import { db } from '../service/firebaseConfig';
 import UserTripCardItem from './components/UserTripCardItem';
-import Footer from '@/view-trip/components/Footer';
+import Footer from '@/components/ui/custom/Footer';
 
 function MyTrips() {
   const navigation=useNavigation();
