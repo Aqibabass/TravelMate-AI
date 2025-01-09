@@ -27,7 +27,7 @@ function InfoSection({ trip }) {
         const location = trip?.userSelection?.location?.label;
         if (location) {
             const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`;
-            window.open(googleMapsUrl, '_blank'); // Open in a new tab
+            window.open(googleMapsUrl, '_blank');
         } else {
             console.log('Location not available');
         }
