@@ -26,7 +26,8 @@ function CreateTrip() {
     const [openDialog, setOpenDialog] = useState(false);
     const [loading, setLoading] = useState(false);
 
-    const navigate=useNavigate();
+    const navigate = useNavigate();
+
     const handleInputChange = (name, value) => {
         setFormData({
             ...formData,
@@ -82,7 +83,7 @@ function CreateTrip() {
 
         await setDoc(doc(db, "AITrips", docId), {
             userSelection: formData,
-            tripData:JSON.parse(TripData),
+            tripData: JSON.parse(TripData),
             userEmail: user?.email,
             id: docId
         });
@@ -90,20 +91,18 @@ function CreateTrip() {
         navigate(`/view-trip/${docId}`);
     };
 
-    const GetUserProfile = (accessToken) => {
-        axios.get(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${accessToken}`, {
-            headers: {
-                Authorization: `Bearer ${accessToken}`,
-                Accept: 'Application/json'
-            }
-        }).then(resp => {
-            console.log('User Profile:', resp.data);
-            localStorage.setItem('user', JSON.stringify(resp.data));
-            setOpenDialog(false);
-            OnGenerateTrip();
-        }).catch(error => {
+    const GetUserProfile = async (accessToken) => {
+        try {
+            const response = await axios.get(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${accessToken}`, {
+                headers: { Authorization: `Bearer ${accessToken}` },
+            });
+            console.log('User Profile:', response.data);
+            localStorage.setItem('user', JSON.stringify(response.data));
+            setOpenDialog(false); 
+            OnGenerateTrip();  
+        } catch (error) {
             console.error('Error fetching user profile:', error);
-        });
+        }
     };
 
     return (
@@ -191,13 +190,13 @@ function CreateTrip() {
                 <Button
                     disabled={loading}
                     onClick={OnGenerateTrip}>
-                    {loading ?
+                    {loading ? 
                         <AiOutlineLoading3Quarters className='h-7 w-7 animate-spin' /> : 'Generate Trip'
                     }
                 </Button>
             </div>
 
-            <Dialog open={openDialog}>
+            <Dialog open={openDialog} onOpenChange={setOpenDialog}>
                 <DialogContent>
                     <DialogHeader>
                         <DialogDescription>
